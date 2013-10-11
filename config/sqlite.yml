@@ -1,0 +1,20 @@
+Default: &defaults
+  database: Malkuth.sqlite3
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: Malkuth_test.sqlite3
+  <<: *defaults
+
+Staging:
+  database: Malkuth_staging.sqlite3
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: Malkuth_production.sqlite3
+  poolsize: 100
+  <<: *defaults
